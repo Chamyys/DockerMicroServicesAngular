@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Egor\\Desktop\\InfoTecsAngular\\ProjectInfoTecs\\ProjectInfoTecs\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ProjectInfoTecs.bundle.scp.css",
+      "PackagePath": "staticwebassets\\ProjectInfoTecs.bundle.scp.css"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ProjectInfoTecs.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.ProjectInfoTecs.props",
+      "PackagePath": "build\\ProjectInfoTecs.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ProjectInfoTecs.props",
+      "PackagePath": "buildMultiTargeting\\ProjectInfoTecs.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.ProjectInfoTecs.props",
+      "PackagePath": "buildTransitive\\ProjectInfoTecs.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
