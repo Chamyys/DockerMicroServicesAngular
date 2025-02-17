@@ -8,6 +8,6 @@ vue create .
 vue add vuetify (3 + cli)
 npm run build
 npm run serve 
-
+ng add @angular/material
 
 (ng serve)
