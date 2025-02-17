@@ -1,0 +1,20 @@
+services:
+  aspnetcorevueapp:
+    image: aspnetcoreangapp
+    build:
+      context: ./ProjectInfoTecs/ProjectInfoTecs
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"  
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development  
+    depends_on:
+      - angularapp
+
+  angularapp:
+    image: angularapp
+    build:
+      context: ./ClientApp
+      dockerfile: Dockerfile
+    ports:
+      - "4200:80"

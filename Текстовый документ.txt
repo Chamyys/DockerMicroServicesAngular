@@ -1,0 +1,13 @@
+ C:\Users\Egor\Desktop\InfoTec\ProjectInfoTecs> docker-compose up --build
+
+
+
+mkdir clientapp
+npm install -g @vue/cli (recommended)
+vue create .
+vue add vuetify (3 + cli)
+npm run build
+npm run serve 
+
+
+(ng serve)
