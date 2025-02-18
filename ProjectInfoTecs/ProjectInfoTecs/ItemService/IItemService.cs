@@ -8,6 +8,8 @@ namespace ProjectInfoTecs.ItemService
     {
         void AddItem(ApplicationEntity entity);
         void RemoveItem(ApplicationEntity entity);
+
+        void BackUp();
         List<ApplicationEntity> GetItems();
     }
 

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace YourNamespace.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class DataController : ControllerBase
     {
@@ -22,10 +22,16 @@ namespace YourNamespace.Controllers
             return Ok(data);
         }
         [HttpPost]
-        public IActionResult Post([FromBody] ApplicationEntity data)
+        public IActionResult Remove([FromBody] ApplicationEntity data)
         {
             _itemService.RemoveItem(data);
-            return Ok(new { Message = "Data received!", Data = data });
+            return Ok(new { Message = "Ok!", Data = data });
+        }
+        [HttpGet]
+        public IActionResult BackUp()
+        {
+            _itemService.BackUp();
+            return Ok(new { Message = "Ok!!"});
         }
     }
 }

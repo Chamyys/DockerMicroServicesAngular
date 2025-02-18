@@ -83,6 +83,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   <span>Test Task for Infotecs</span>
   <span class="spacer"></span>
   <button mat-raised-button (click)="getData()">Выгрузить данные из генератора(Генерирует не больше 10, по 1 каждые 10 секунд)</button>
+   <button mat-raised-button (click)="back()">Создать back up файл</button>
 </mat-toolbar>
 
 <mat-card *ngIf="response && !selectedItem" class="container">
@@ -135,7 +136,7 @@ export class AppComponent {
   constructor(private http: HttpClient) { }
 
   getData() {
-    this.http.get<any[]>('http://localhost:5000/api/data').subscribe(
+    this.http.get<any[]>('http://localhost:5000/api/data/get').subscribe(
       (data) => {
         this.response = data; 
         this.selectedItem = null; 
@@ -147,7 +148,16 @@ export class AppComponent {
     );
   }
 
-
+  back() {
+    this.http.get('http://localhost:5000/api/data/BackUp').subscribe(
+      (response) => {
+        console.log('Post response:', response);
+      },
+      (error) => {
+        console.error('Error occurred!', error);
+      }
+    );
+  }
   selectItem(item: any) {
     this.selectedItem = item;
   }
@@ -158,7 +168,7 @@ export class AppComponent {
     this.response = this.response.filter((i) => i._id !== item._id);
 
     
-    this.http.post('http://localhost:5000/api/data', item).subscribe(
+    this.http.post('http://localhost:5000/api/data/Remove', item).subscribe(
       (response) => {
         console.log('Post response:', response);
       },
